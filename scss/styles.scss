@@ -117,6 +117,7 @@ a {
 
 /*Button*/
 .button {
+  display: block;
   padding: 16px 32px;
   border-radius: 8px;
   border: none;
@@ -144,6 +145,124 @@ a {
 .decoration {
   position: absolute;
   z-index: -1;
+  width: 100%;
+}
+
+/*Visually-hidden*/
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*Contact-form*/
+.contact-form {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 600px;
+  }
+
+  &__title {
+    max-width: 604px;
+    text-align: center;
+    margin: 0 auto 16px;
+  }
+
+  &__text {
+    line-height: 133%;
+    letter-spacing: 0.05em;
+    color: var(--color-secondary-grey);
+    margin: 0 auto 42px;
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 24px;
+
+    &__lable {
+      position: absolute;
+      top: 16px;
+      left: 42px;
+    }
+
+    &__img {
+      position: absolute;
+      z-index: -1;
+      left: 40px;
+      top: 8px;
+    }
+
+    &__input {
+      font-family: 'Roboto', sans-serif;
+      color: var(--color-primary-orange);
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.05em;
+      background-color: transparent;
+      width: 100%;
+      padding: 12.5px 35px 12.5px 80px;
+      border: 1px solid var(--color-primary-orange);
+      border-radius: 8px;
+      transition: color 0.3s;
+
+      &:focus {
+        color: var(--color-primaty-dark);
+        outline: none;
+        border-color: var(--color-primary-orange);
+      }
+
+      &::placeholder {
+        color: var(--color-primary-orange);
+        transition: color 0.3s;
+      }
+
+      &:focus::placeholder {
+        color: var(--color-primaty-dark);
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto 16px;
+  }
+}
+
+/*Privay*/
+.privacy {
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    & input {
+      display: none;
+    }
+
+    & input:checked + .privacy__custom {
+      background-image: url('../images/checkbox-active.png');
+    }
+  }
+
+  &__custom {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url('../images/checkbox-normal.png');
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--color-secondary-grey);
+  }
 }
 
 /*Header*/
@@ -194,7 +313,7 @@ a {
     width: 100%;
     height: 808px;
     z-index: -1;
-    background-image: url(/images/hero-section-bg.png);
+    background-image: url('../images/hero-section-bg.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     content: '';
@@ -350,6 +469,7 @@ a {
 
   &__list-container {
     display: flex;
+    align-items: flex-end;
     gap: 24px;
   }
 
@@ -383,7 +503,6 @@ a {
 
   &__link {
     display: flex;
-    align-items: end;
     gap: 8px;
     line-height: 133%;
     color: var(--color-primary-orange);
@@ -403,7 +522,7 @@ a {
     width: 100%;
     height: 521px;
     z-index: -1;
-    background-image: url(/images/services-section-bg.png);
+    background-image: url('../images/services-section-bg.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     content: '';
@@ -413,5 +532,172 @@ a {
     position: absolute;
     left: 1112px;
     top: -83px;
+  }
+}
+
+/*Happy-section*/
+.happy-section {
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    align-self: center;
+    margin-bottom: 48px;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-secondary-grey);
+    fill: var(--color-primary-white);
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-primary-orange);
+    }
+
+    &.next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+  }
+
+  &__card {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    height: 456px;
+    border-radius: 24px;
+
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 16px;
+      background: var(--color-secondary-grey);
+    }
+
+    &__image {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: var(--color-primary-white);
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 24px;
+      color: var(--color-secondary-cornflower-blue);
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    &__button {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      background-color: var(--color-secondary-grey);
+      border-radius: 50%;
+
+      &--active {
+        background-color: var(--color-primary-orange);
+      }
+    }
+  }
+
+  &__decoration-image {
+    position: absolute;
+
+    &:nth-child(1) {
+      left: -34px;
+      top: -6px;
+    }
+
+    &:nth-child(2) {
+      left: 1236px;
+      top: 8px;
+    }
+
+    &:nth-child(3) {
+      left: -254px;
+      top: 384px;
+    }
+  }
+}
+
+/*Contact-section*/
+.contant-section {
+  display: flex;
+  position: relative;
+  padding: 168px 0 92px;
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: -38px;
+    width: 100%;
+    height: 833px;
+    z-index: -1;
+    background-image: url('../images/contact-section-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    content: '';
+  }
+
+  &__decoration-image {
+    position: absolute;
+
+    &:nth-child(1) {
+      left: 0px;
+      top: 44px;
+    }
+
+    &:nth-child(2) {
+      right: 0px;
+      top: -138px;
+    }
   }
 }
