@@ -51,6 +51,10 @@ html {
   --color-secondary-pink: #d9a6ff;
 }
 
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;
+
 /*Base*/
 *,
 *::before,
@@ -64,6 +68,10 @@ body {
   background-color: #fff;
   color: var(--color-primaty-dark);
   margin: 0;
+
+  @media screen and (max-width: $bp-desktop) {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -96,6 +104,10 @@ a {
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
+
+  &.nutrition {
+    max-width: 1296px;
+  }
 }
 
 /*Link*/
@@ -117,6 +129,23 @@ a {
   &:hover {
     fill: var(--color-primaty-dark);
   }
+
+  &__link {
+    line-height: 0;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: $bp-desktop) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /*Button*/
@@ -132,6 +161,11 @@ a {
   cursor: pointer;
   transition: background-color 0.3s;
 
+  @media screen and (max-width: $bp-desktop) {
+    padding: 8px 24px;
+    font-size: 16px;
+  }
+
   &:hover {
     background-color: var(--color-secondary-orange);
   }
@@ -143,6 +177,10 @@ a {
     font-family: 'Rowdies';
     font-size: 56px;
     font-weight: 400;
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 32px;
+    }
   }
 }
 
@@ -151,6 +189,18 @@ a {
   position: absolute;
   z-index: -1;
   width: 100%;
+
+  &.centered-h {
+    width: 0;
+  }
+
+  &.centered-v {
+    align-self: anchor-center;
+  }
+
+  &.full-height {
+    height: 100%;
+  }
 }
 
 /*Visually-hidden*/
@@ -279,6 +329,10 @@ a {
   width: 100%;
   padding-top: 32px;
 
+  @media screen and (max-width: $bp-desktop) {
+    padding-top: 18px;
+  }
+
   &__container {
     display: flex;
     gap: 24px;
@@ -292,9 +346,20 @@ a {
     gap: 24px;
   }
 
+  &__img {
+    @media screen and (max-width: $bp-desktop) {
+      max-width: 92px;
+      max-height: 20px;
+    }
+  }
+
   &__menu {
     display: flex;
     gap: 48px;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
   }
 
   &__buttons-container {
@@ -303,6 +368,24 @@ a {
     flex-grow: 1;
     align-items: center;
     gap: 24px;
+
+    @media screen and (max-width: $bp-tablet) {
+      gap: 16px;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-button {
+    display: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: block;
+    }
   }
 }
 
@@ -322,6 +405,16 @@ a {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     content: '';
+
+    @media screen and (max-width: $bp-desktop) {
+      top: 10px;
+      height: 498px;
+      background-image: url('../images/mobile-hero-section-bg.png');
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      height: 330px;
+    }
   }
 
   &__container {
@@ -329,10 +422,31 @@ a {
     min-height: 896px;
     padding: 297px 0 60px;
     gap: 65px;
+
+    @media screen and (max-width: $bp-desktop) {
+      align-items: center;
+      justify-content: center;
+      min-height: 0px;
+      padding: 111px 0 24px;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 73px 0 74px;
+    }
   }
 
   &__content {
-    gap: 65px;
+    @media screen and (max-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 296px;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      position: relative;
+    }
   }
 
   &__title {
@@ -340,6 +454,12 @@ a {
     letter-spacing: 0.05em;
     max-width: 635px;
     margin-bottom: 40px;
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 32px;
+      letter-spacing: normal;
+      margin-bottom: 24px;
+    }
   }
 
   &__text {
@@ -347,16 +467,34 @@ a {
     max-width: 428px;
     line-height: 155%;
     margin-bottom: 24px;
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 16px;
+    }
   }
 
   &__image {
     max-height: 516px;
     max-width: 506px;
     align-self: flex-end;
+
+    @media screen and (max-width: $bp-desktop) {
+      max-height: 376px;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
   }
 
   &__decoration-image {
     position: absolute;
+
+    @media screen and (max-width: $bp-desktop) {
+      display: none;
+    }
 
     &:nth-child(1) {
       left: 454px;
@@ -408,55 +546,202 @@ a {
       top: 484px;
     }
   }
+
+  &__decoration-image-mobile {
+    position: absolute;
+    display: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      left: 298px;
+      top: 68px;
+      width: 20px;
+    }
+
+    &:nth-child(2) {
+      left: 46px;
+      top: 212px;
+      width: 18px;
+    }
+
+    &:nth-child(3) {
+      left: 216px;
+      top: 222px;
+      width: 20px;
+    }
+
+    &:nth-child(4) {
+      left: 140px;
+      top: 224px;
+      width: 32px;
+    }
+
+    &:nth-child(5) {
+      left: 270px;
+      top: 170px;
+      width: 26px;
+    }
+
+    &:nth-child(6) {
+      left: 0px;
+      top: 170px;
+      width: 33px;
+    }
+  }
 }
 
 /*Less-talk-section*/
 .less-talk-section {
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 
   &__container {
     display: flex;
+    justify-content: center;
     padding-top: 8px;
     gap: 24px;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__img {
+    @media screen and (max-width: $bp-desktop) {
+      max-height: 502px;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
   }
 
   &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     align-self: center;
     padding-top: 24px;
+
+    @media screen and (max-width: $bp-desktop) {
+      max-width: 319px;
+    }
+
+    @media screen and (max-width: $bp-tablet) {
+      max-width: 1000px;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
+
+    @media screen and (max-width: $bp-desktop) {
+      margin-bottom: 24px;
+    }
   }
 
   &__text {
     font-size: 22px;
     line-height: 155%;
     margin-bottom: 24px;
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 18px;
+      line-height: 133%;
+      letter-spacing: 0.05rem;
+    }
   }
 
   &__decoration-image {
     position: absolute;
 
     &:nth-child(1) {
-      left: -120px;
-      top: 114px;
+      left: -758px;
+      top: 116px;
+
+      @media screen and (max-width: $bp-desktop) {
+        left: -550px;
+        top: 70px;
+      }
+
+      @media screen and (max-width: $bp-tablet) {
+        left: 120px;
+        top: -10px;
+        width: 65px;
+      }
     }
 
     &:nth-child(2) {
-      left: 1144px;
-      top: -24px;
+      left: 540px;
+      top: -16px;
+
+      @media screen and (max-width: $bp-desktop) {
+        left: 324px;
+        top: -38px;
+      }
+
+      @media screen and (max-width: $bp-tablet) {
+        left: 130px;
+        top: 58px;
+        width: 33px;
+      }
     }
 
     &:nth-child(3) {
-      left: 990px;
-      top: 498px;
+      left: 384px;
+      top: 516px;
+
+      @media screen and (max-width: $bp-desktop) {
+        left: 304px;
+        top: 384px;
+      }
+
+      @media screen and (max-width: $bp-tablet) {
+        display: none;
+      }
     }
 
-    &:nth-child(4) {
-      left: 226px;
-      top: 616px;
+    &.plate {
+      left: -400px;
+      top: 288px;
+
+      @media screen and (max-width: $bp-desktop) {
+        left: -300px;
+        top: 202px;
+      }
+
+      @media screen and (max-width: $bp-tablet) {
+        display: none;
+      }
+    }
+
+    &.arrow {
+      display: none;
+
+      @media screen and (max-width: $bp-tablet) {
+        display: block;
+        width: 48px;
+        left: 160px;
+        top: 0px;
+      }
+    }
+  }
+
+  .learn-more {
+    position: absolute;
+    display: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: block;
+      width: 73px;
+      left: 180px;
+      bottom: 4px;
     }
   }
 }

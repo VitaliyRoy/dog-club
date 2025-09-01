@@ -17,7 +17,11 @@
         <div class="header__container">
           <nav class="header__nav">
             <a href="/">
-              <img src="./images/logo.png" alt="Логотип Dog Club" />
+              <img
+                class="header__img"
+                src="./images/logo.png"
+                alt="Логотип Dog Club"
+              />
             </a>
             <ul class="header__menu">
               <li><a class="link" href="#less-talk-section">Less talk</a></li>
@@ -29,13 +33,18 @@
             </ul>
           </nav>
           <div class="header__buttons-container">
-            <a href="./nutrition.html">
+            <a class="icon__link" href="./nutrition.html">
               <svg class="icon" width="40" height="40">
                 <use href="./images/icons.svg#icon-shop"></use>
               </svg>
             </a>
-            <button class="button modal-btn-open" type="button">
+            <button class="header__button button modal-btn-open" type="button">
               Contact us
+            </button>
+            <button class="header__menu-button icon__button" type="button">
+              <svg class="icon">
+                <use href="./images/icons.svg#icon-mobile-menu-btn"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -53,6 +62,38 @@
                 Human–canine bonding is the relationship between dogs and humans
               </p>
               <button class="button" type="button">Explore More</button>
+              <div class="decoration">
+                <img
+                  class="hero-section__decoration-image-mobile"
+                  src="./images/blue-paw.png"
+                  alt="blue-paw"
+                />
+                <img
+                  class="hero-section__decoration-image-mobile"
+                  src="./images/orange-paw.png"
+                  alt="orange-paw"
+                />
+                <img
+                  class="hero-section__decoration-image-mobile"
+                  src="./images/pink-paw.png"
+                  alt="pink-paw"
+                />
+                <img
+                  class="hero-section__decoration-image-mobile"
+                  src="./images/small-dog1.png"
+                  alt="small-dog1"
+                />
+                <img
+                  class="hero-section__decoration-image-mobile"
+                  src="./images/small-dog2.png"
+                  alt="small-dog2"
+                />
+                <img
+                  class="hero-section__decoration-image-mobile"
+                  src="./images/small-dog3.png"
+                  alt="small-dog3"
+                />
+              </div>
             </div>
             <img
               class="hero-section__image"
@@ -118,6 +159,7 @@
         <div class="container">
           <div class="less-talk-section__container">
             <img
+              class="less-talk-section__img"
               src="./images/less-talk-section-dog.png"
               alt="less-talk-section-dog"
             />
@@ -134,33 +176,47 @@
                 physically.
               </p>
               <button class="button" type="button">Explore More</button>
-            </div>
-            <div class="decoration">
-              <img
-                class="less-talk-section__decoration-image"
-                src="./images/less-talk-sectio-bg-paw1.png"
-                alt="less-talk-sectio-bg-paw1"
-              />
-              <img
-                class="less-talk-section__decoration-image"
-                src="./images/less-talk-sectio-bg-paw2.png"
-                alt="less-talk-sectio-bg-paw2"
-              />
-              <img
-                class="less-talk-section__decoration-image"
-                src="./images/less-talk-sectio-bg-paw3.png"
-                alt="less-talk-sectio-bg-paw3"
-              />
-              <img
-                class="less-talk-section__decoration-image"
-                src="./images/less-talk-sectio-bg-plate.png"
-                alt="less-talk-sectio-bg-plate"
-              />
+              <div class="decoration centered-v">
+                <img
+                  class="less-talk-section__decoration-image plate"
+                  src="./images/less-talk-sectio-bg-plate.png"
+                  alt="less-talk-sectio-bg-plate"
+                />
+              </div>
+              <div class="decoration full-height">
+                <img
+                  class="less-talk-section__decoration-image arrow"
+                  src="./images/arrow.png"
+                  alt="arrow"
+                />
+                <img
+                  class="learn-more"
+                  src="./images/learn-more.png"
+                  alt="learn-more"
+                />
+              </div>
             </div>
           </div>
         </div>
+        <div class="decoration centered-h">
+          <img
+            class="less-talk-section__decoration-image"
+            src="./images/less-talk-sectio-bg-paw1.png"
+            alt="less-talk-sectio-bg-paw1"
+          />
+          <img
+            class="less-talk-section__decoration-image"
+            src="./images/less-talk-sectio-bg-paw2.png"
+            alt="less-talk-sectio-bg-paw2"
+          />
+          <img
+            class="less-talk-section__decoration-image"
+            src="./images/less-talk-sectio-bg-paw3.png"
+            alt="less-talk-sectio-bg-paw3"
+          />
+        </div>
       </section>
-      <section class="services-section" id="services-section">
+      <!-- <section class="services-section" id="services-section">
         <div class="container">
           <div class="services-section__content">
             <h2 class="services-section__title section__title">
@@ -221,8 +277,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="happy-section" id="happy-section">
+      </section> -->
+      <!-- <section class="happy-section" id="happy-section">
         <div class="container">
           <div class="happy-section__content">
             <h2 class="happy-section__title section__title">Happy customer</h2>
@@ -392,8 +448,8 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="contant-section" id="contact-section">
+      </section> -->
+      <!-- <section class="contant-section" id="contact-section">
         <div class="container">
           <div class="contact-form__container">
             <h2 class="contact-form__title section__title">
@@ -502,9 +558,9 @@
             alt="contact-section-dog2"
           />
         </div>
-      </section>
+      </section> -->
     </main>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="footer__bg-container">
         <div class="container">
           <div class="footer__container">
@@ -585,7 +641,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <div class="backdrop is-hidden">
       <div class="modal">
