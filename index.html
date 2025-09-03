@@ -38,14 +38,72 @@
                 <use href="./images/icons.svg#icon-shop"></use>
               </svg>
             </a>
-            <button class="header__button button modal-btn-open" type="button">
+            <button class="button modal-btn-open" type="button">
               Contact us
             </button>
-            <button class="header__menu-button icon__button" type="button">
+            <button
+              class="header__menu-button icon__button menu-btn-open"
+              type="button"
+            >
               <svg class="icon">
                 <use href="./images/icons.svg#icon-mobile-menu-btn"></use>
               </svg>
             </button>
+          </div>
+          <div class="mobile-menu">
+            <div class="mobile-menu__container">
+              <button
+                type="button"
+                class="mobile-menu__close-button menu-btn-close"
+              >
+                <svg class="" width="20" height="20">
+                  <use href="./images/icons.svg#icon-modal-close-button"></use>
+                </svg>
+              </button>
+              <nav>
+                <a href="/">
+                  <img
+                    class="mobile-menu__img"
+                    src="./images/logo.png"
+                    alt="Логотип Dog Club"
+                  />
+                </a>
+                <ul class="mobile-menu__menu">
+                  <li>
+                    <a class="link menu-btn-close" href="#less-talk-section"
+                      >Less talk</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link menu-btn-close" href="#services-section"
+                      >Services category
+                    </a>
+                  </li>
+                  <li>
+                    <a class="link menu-btn-close" href="#happy-section"
+                      >Happy customer
+                    </a>
+                  </li>
+                  <li>
+                    <a class="link menu-btn-close" href="#contact-section"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+                <div class="mobile-menu_social-container">
+                  <a href="">
+                    <svg class="icon" width="36" height="36">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <svg class="icon" width="36" height="36">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -658,7 +716,7 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
-          <svg class="" width="24" height="24">
+          <svg class="" width="20" height="20">
             <use href="./images/icons.svg#icon-modal-close-button"></use>
           </svg>
         </button>
@@ -756,7 +814,7 @@
             </label>
           </form>
         </div>
-        <div class="modal__decoration decoration">
+        <div class="modal__decoration decoration centered-h">
           <img
             class="modal__decoration-image"
             src="./images/modal-bg-paw1.png"
@@ -784,5 +842,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/happy-slider.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -139,6 +139,8 @@ a {
   }
 
   &__button {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-primaty-dark);
     background-color: transparent;
     border: none;
     padding: 0;
@@ -245,6 +247,7 @@ a {
   }
 
   &__text {
+    text-align: center;
     line-height: 133%;
     letter-spacing: 0.05em;
     color: var(--color-secondary-grey);
@@ -387,8 +390,8 @@ a {
 
   &__img {
     @media screen and (max-width: $bp-desktop) {
-      max-width: 92px;
-      max-height: 20px;
+      width: 92px;
+      height: 20px;
     }
   }
 
@@ -409,13 +412,7 @@ a {
     gap: 24px;
 
     @media screen and (max-width: $bp-tablet) {
-      gap: 16px;
-    }
-  }
-
-  &__button {
-    @media screen and (max-width: $bp-tablet) {
-      display: none;
+      gap: 15px;
     }
   }
 
@@ -453,6 +450,7 @@ a {
 
     @media screen and (max-width: $bp-tablet) {
       height: 330px;
+      top: 21px;
     }
   }
 
@@ -470,7 +468,7 @@ a {
     }
 
     @media screen and (max-width: $bp-tablet) {
-      padding: 73px 0 74px;
+      padding: 84px 0 74px;
     }
   }
 
@@ -1344,6 +1342,10 @@ a {
   background: rgba(24, 24, 23, 0.4);
   transition: opacity 0.3s, visibility 0.3s;
 
+  @media screen and (max-width: $bp-desktop) {
+    padding: 146px 20px;
+  }
+
   &.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -1354,6 +1356,7 @@ a {
 /*Modal*/
 .modal {
   display: flex;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   padding: 142px 140px;
@@ -1364,8 +1367,14 @@ a {
   border-radius: 32px;
   background-color: var(--color-secondary-beige);
 
+  @media screen and (max-width: $bp-desktop) {
+    padding: 52px 10px;
+    max-width: 526px;
+  }
+
   &__btn-close {
     position: absolute;
+    padding: 0;
     top: 56px;
     right: 48px;
     border: none;
@@ -1373,6 +1382,11 @@ a {
     background: transparent;
     fill: var(--color-primary-orange);
     transition: fill 0.3s;
+
+    @media screen and (max-width: $bp-desktop) {
+      top: 30px;
+      right: 30px;
+    }
 
     &:hover {
       fill: var(--color-secondary-orange);
@@ -1386,23 +1400,27 @@ a {
   &__decoration-image {
     position: absolute;
 
+    @media screen and (max-width: $bp-desktop) {
+      display: none;
+    }
+
     &:nth-child(1) {
-      right: 888px;
+      right: 308px;
       top: 58px;
     }
 
     &:nth-child(2) {
-      right: 250px;
+      right: -330px;
       top: -118px;
     }
 
     &:nth-child(3) {
-      left: -164px;
+      left: -462px;
       top: 626px;
     }
 
     &:nth-child(4) {
-      right: 200px;
+      right: -380px;
       top: 600px;
     }
   }
@@ -1417,6 +1435,10 @@ a {
     position: relative;
     flex-direction: column;
     padding: 157px 0 70px;
+
+    @media screen and (max-width: $bp-desktop) {
+      padding: 82px 0 40px;
+    }
   }
 
   &__title-and-sorting-container {
@@ -1424,6 +1446,13 @@ a {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 72px;
+
+    @media screen and (max-width: $bp-desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
   }
 
   &__title {
@@ -1435,6 +1464,10 @@ a {
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
   }
 
   &__sorting-text {
@@ -1472,6 +1505,11 @@ a {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 
+    @media screen and (max-width: $bp-desktop) {
+      padding: 6px;
+      font-size: 14px;
+    }
+
     &:hover {
       background-color: var(--color-primary-orange);
       color: var(--color-primary-white);
@@ -1483,12 +1521,28 @@ a {
     }
   }
 
+  &__mobile-sorting-button {
+    display: none;
+
+    @media screen and (max-width: $bp-tablet) {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+  }
+
   &__goods {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(286px, 1fr));
     row-gap: 40px;
     column-gap: 32px;
     margin-bottom: 32px;
+
+    @media screen and (max-width: $bp-desktop) {
+      grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
+      column-gap: 16px;
+    }
   }
 
   &__item {
@@ -1499,6 +1553,10 @@ a {
     border-radius: 8px;
     transition: box-shadow 0.3s;
 
+    @media screen and (max-width: $bp-desktop) {
+      padding: 8px 0px 16px 0px;
+    }
+
     &:hover {
       box-shadow: 0 8px 16px 0 rgba(24, 24, 23, 0.08);
       background: #fff;
@@ -1507,12 +1565,25 @@ a {
 
   &__img {
     margin-bottom: 22px;
+
+    @media screen and (max-width: $bp-desktop) {
+      width: 88px;
+      height: 162px;
+      margin-bottom: 8px;
+    }
   }
 
   &__code-and-rating-container {
     display: flex;
     gap: 16px;
     margin-bottom: 13px;
+
+    @media screen and (max-width: $bp-desktop) {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
   }
 
   &__code {
@@ -1520,6 +1591,12 @@ a {
     font-size: 14px;
     line-height: 16px;
     color: var(--color-secondary-grey);
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14px;
+    }
   }
 
   &__rating-list {
@@ -1543,6 +1620,11 @@ a {
     font-size: 16px;
     text-align: center;
     margin-bottom: 24px;
+
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
   }
 
   &__price {
@@ -1552,11 +1634,21 @@ a {
     font-weight: 600;
     gap: 8px;
 
+    @media screen and (max-width: $bp-desktop) {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
     &__old {
       font-weight: 400;
       font-size: 14px;
       text-decoration: line-through;
       color: var(--color-secondary-grey);
+
+      @media screen and (max-width: $bp-desktop) {
+        font-weight: 300;
+        font-size: 12px;
+      }
     }
   }
 
@@ -1611,7 +1703,7 @@ a {
     }
 
     &:nth-child(3) {
-      left: 140;
+      left: 140px;
       top: 634px;
     }
 
@@ -1628,6 +1720,130 @@ a {
     &:nth-child(6) {
       right: 98px;
       top: 1254px;
+    }
+  }
+}
+
+/*Mobile-menu*/
+.mobile-menu {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary-white);
+  transform: translateX(100%);
+  transition: transform 0.3s;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__container {
+    padding: 16px 22px;
+  }
+
+  &__close-button {
+    position: absolute;
+    padding: 0;
+    top: 16px;
+    right: 22px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    fill: var(--color-primary-orange);
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: var(--color-secondary-orange);
+    }
+  }
+
+  &__img {
+    margin-bottom: 30px;
+    width: 92px;
+    height: 20px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  &_social-container {
+    display: flex;
+    gap: 12px;
+
+    & a {
+      line-height: 0;
+    }
+  }
+}
+
+/*Sorting-backdrop*/
+.sorting-backdrop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(24, 24, 23, 0.4);
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+/*Sorting-menu*/
+.sorting-menu {
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  padding: 16px 20px;
+  border-radius: 24px 24px 0 0;
+  background-color: var(--color-primary-white);
+
+  &__title {
+    justify-self: center;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--color-primary-orange);
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    padding: 2.5px 0;
+    transition: color 0.3s, fill 0.3s;
+
+    &.active {
+      color: var(--color-primary-orange);
+      fill: var(--color-primary-orange);
     }
   }
 }

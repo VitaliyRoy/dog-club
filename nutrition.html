@@ -14,7 +14,11 @@
         <div class="header__container">
           <nav class="header__nav">
             <a href="/">
-              <img src="./images/logo.png" alt="Логотип Dog Club" />
+              <img
+                class="header__img"
+                src="./images/logo.png"
+                alt="Логотип Dog Club"
+              />
             </a>
             <ul class="header__menu">
               <li><a class="link" href="#less-talk-section">Less talk</a></li>
@@ -26,7 +30,7 @@
             </ul>
           </nav>
           <div class="header__buttons-container">
-            <a href="">
+            <a class="icon__link" href="./nutrition.html">
               <svg class="icon" width="40" height="40">
                 <use href="./images/icons.svg#icon-shop"></use>
               </svg>
@@ -34,6 +38,69 @@
             <button class="button modal-btn-open" type="button">
               Contact us
             </button>
+            <button
+              class="header__menu-button icon__button menu-btn-open"
+              type="button"
+            >
+              <svg class="icon">
+                <use href="./images/icons.svg#icon-mobile-menu-btn"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="mobile-menu">
+            <div class="mobile-menu__container">
+              <button
+                type="button"
+                class="mobile-menu__close-button menu-btn-close"
+              >
+                <svg class="" width="20" height="20">
+                  <use href="./images/icons.svg#icon-modal-close-button"></use>
+                </svg>
+              </button>
+              <nav>
+                <a href="/">
+                  <img
+                    class="mobile-menu__img"
+                    src="./images/logo.png"
+                    alt="Логотип Dog Club"
+                  />
+                </a>
+                <ul class="mobile-menu__menu">
+                  <li>
+                    <a class="link menu-btn-close" href="#less-talk-section"
+                      >Less talk</a
+                    >
+                  </li>
+                  <li>
+                    <a class="link menu-btn-close" href="#services-section"
+                      >Services category
+                    </a>
+                  </li>
+                  <li>
+                    <a class="link menu-btn-close" href="#happy-section"
+                      >Happy customer
+                    </a>
+                  </li>
+                  <li>
+                    <a class="link menu-btn-close" href="#contact-section"
+                      >Contact</a
+                    >
+                  </li>
+                </ul>
+                <div class="mobile-menu_social-container">
+                  <a href="">
+                    <svg class="icon" width="36" height="36">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <svg class="icon" width="36" height="36">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -44,6 +111,14 @@
           <div class="nutrition-section__container">
             <div class="nutrition-section__title-and-sorting-container">
               <h2 class="nutrition-section__title section__title">Nutrition</h2>
+              <button
+                class="nutrition-section__mobile-sorting-button icon__button"
+              >
+                <svg class="icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-mobile-sorting"></use>
+                </svg>
+                Popularity
+              </button>
               <div class="nutrition-section__sorting-container">
                 <p class="nutrition-section__sorting-text">Sorting:</p>
                 <ul class="nutrition-section__sorting-list">
@@ -656,6 +731,63 @@
                 </a>
               </li>
             </ul>
+            <div class="sorting-backdrop is-hidden">
+              <div class="sorting-menu">
+                <h3 class="sorting-menu__title">Sorting</h3>
+                <ul class="sorting-menu__list">
+                  <li>
+                    <button
+                      class="sorting-menu__button icon__button active sorting-btn-close"
+                    >
+                      Popularity
+                      <svg width="14" height="14">
+                        <use href="./images/icons.svg#icon-sorting"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="sorting-menu__button icon__button sorting-btn-close"
+                    >
+                      Cheaper first
+                      <svg width="14" height="14">
+                        <use href="./images/icons.svg#icon-sorting"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="sorting-menu__button icon__button sorting-btn-close"
+                    >
+                      More expensive first
+                      <svg width="14" height="14">
+                        <use href="./images/icons.svg#icon-sorting"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="sorting-menu__button icon__button sorting-btn-close"
+                    >
+                      By name
+                      <svg width="14" height="14">
+                        <use href="./images/icons.svg#icon-sorting"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="sorting-menu__button icon__button sorting-btn-close"
+                    >
+                      New ones first
+                      <svg width="14" height="14">
+                        <use href="./images/icons.svg#icon-sorting"></use>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div class="decoration">
               <img
                 class="nutrition-section__decoration-image"
@@ -698,7 +830,7 @@
           <div class="footer__container">
             <div class="footer__logo-container">
               <a href="">
-                <img src="./images/logo.png" alt="logo" />
+                <img class="footer__logo" src="./images/logo.png" alt="logo" />
               </a>
               <div class="footer__social-container">
                 <a href="">
@@ -770,6 +902,18 @@
                 <p class="privacy__text">I agree to the privacy policy</p>
               </label>
             </form>
+            <div class="decoration centered-h">
+              <img
+                class="footer__decoration-image"
+                src="./images/happy-section-bg-paw1.png"
+                alt="happy-section-bg-paw1"
+              />
+              <img
+                class="footer__decoration-image"
+                src="./images/happy-section-bg-paw2.png"
+                alt="happy-section-bg-paw2"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -778,7 +922,7 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
-          <svg class="" width="24" height="24">
+          <svg class="" width="20" height="20">
             <use href="./images/icons.svg#icon-modal-close-button"></use>
           </svg>
         </button>
@@ -904,5 +1048,7 @@
     <script src="./js/modal.js"></script>
     <script src="./js/sorting.js"></script>
     <script src="./js/pagination.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/nutrition-sorting-menu.js "></script>
   </body>
 </html>
