@@ -1342,10 +1342,6 @@ a {
   background: rgba(24, 24, 23, 0.4);
   transition: opacity 0.3s, visibility 0.3s;
 
-  @media screen and (max-width: $bp-desktop) {
-    padding: 146px 20px;
-  }
-
   &.is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -1370,6 +1366,7 @@ a {
   @media screen and (max-width: $bp-desktop) {
     padding: 52px 10px;
     max-width: 526px;
+    max-height: 565px;
   }
 
   &__btn-close {
